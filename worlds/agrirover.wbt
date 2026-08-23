@@ -1,0 +1,181 @@
+#VRML_SIM R2022b utf8
+
+WorldInfo {
+  basicTimeStep 32
+}
+
+Viewpoint {
+  position 0 14 20
+  orientation -0.45 0.75 0.5 0.75
+}
+
+Background {
+  skyColor [0.55 0.78 0.95]
+  groundColor [0.45 0.65 0.35]
+}
+
+DirectionalLight {
+  direction -0.4 -1 -0.5
+  intensity 1
+}
+
+Solid {
+  translation 0 -0.15 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.28 0.45 0.22
+        roughness 1
+      }
+      geometry Box {
+        size 18 0.3 14
+      }
+    }
+  ]
+  name "DemoTerrain"
+}
+
+Solid {
+  translation 0 0.5 -5
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.85 0.85 0.88
+      }
+      geometry Box {
+        size 3 1 2
+      }
+    }
+  ]
+  name "CollectionCentre"
+}
+
+Solid {
+  translation -6 0.2 -1
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.95 0.75 0.2 }
+      geometry Cylinder { radius 0.8 height 0.4 }
+    }
+  ]
+  name "FarmA"
+}
+
+Solid {
+  translation -5 0.2 4
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.95 0.55 0.15 }
+      geometry Cylinder { radius 0.8 height 0.4 }
+    }
+  ]
+  name "FarmB"
+}
+
+Solid {
+  translation 0 0.2 5
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.9 0.35 0.15 }
+      geometry Cylinder { radius 0.8 height 0.4 }
+    }
+  ]
+  name "FarmC"
+}
+
+Solid {
+  translation 5 0.2 3
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.75 0.3 0.8 }
+      geometry Cylinder { radius 0.8 height 0.4 }
+    }
+  ]
+  name "FarmD"
+}
+
+Solid {
+  translation 6 0.2 -1
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.25 0.7 0.35 }
+      geometry Cylinder { radius 0.8 height 0.4 }
+    }
+  ]
+  name "FarmE"
+}
+
+Solid {
+  translation 2 0.2 0
+  rotation 0 0 1 -0.08
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.45 0.3 0.18
+        roughness 1
+      }
+      geometry Box { size 5 0.4 2 }
+    }
+  ]
+  name "UnevenTerrain"
+}
+
+Solid {
+  translation -1 0.55 -1
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.75 0.15 0.12 }
+      geometry Box { size 1 1 1 }
+    }
+  ]
+  name "Obstacle1"
+}
+
+Robot {
+  translation 0 0.45 -4
+  name "AgriRover"
+  children [
+    Transform {
+      translation 0 0.35 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.15 0.45 0.8
+            roughness 0.7
+          }
+          geometry Box { size 2 0.5 1.3 }
+        }
+      ]
+    }
+    Transform {
+      translation 0 0.7 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.75 0.75 0.78
+            roughness 0.7
+          }
+          geometry Box { size 1.4 0.35 1 }
+        }
+      ]
+    }
+    Transform {
+      translation 0 0.95 0
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.2 0.2 0.22 }
+          geometry Box { size 0.35 0.35 0.35 }
+        }
+      ]
+    }
+    Transform {
+      translation 0 0.35 -0.72
+      children [
+        Shape {
+          appearance PBRAppearance { baseColor 0.1 0.1 0.1 }
+          geometry Box { size 0.6 0.18 0.08 }
+        }
+      ]
+    }
+  ]
+}
